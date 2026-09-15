@@ -52,3 +52,12 @@ h2 {
   margin: 3rem 0;
   color: var(--main-color);
 }
+
+h3 {
+  font-family: var(--secondary-font);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 0.9;
+  text-align: center;
+  margin: 2rem 0;
+}

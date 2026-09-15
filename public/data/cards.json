@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Dracólito Ígnero",
-    "img": "https://ibb.co/VckPdwZt",
+    "img": "images/dracólito-ígneo.png",
     "alternativeText": "carta de dracólito ígneo",
     "description": "Carta de combate de tipo dragón",
     "price": 500
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Barrera Dimensional",
-    "img": "https://ibb.co/fdCgJnRh",
+    "img": "images/barrera-dimensional.png",
     "alternativeText": "carta de barrera dimensional",
     "description": "Carta de tipo trampa",
     "price": 200
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "name": "Caballero del Vacío",
-    "img": "https://ibb.co/dsF4CrJk",
+    "img": "images/caballero-del-vacío.png",
     "alternativeText": "carta de cabellero del vacío",
     "description": "Carta de combate de tipo guerrero",
     "price": 400
@@ -26,15 +26,15 @@
   {
     "id": 4,
     "name": "Guardián del Cristal",
-    "img": "https://ibb.co/3m2NQCTp",
-    "alternativeText": "carta de guardián del crista",
+    "img": "images/guardián-del-cristal.png",
+    "alternativeText": "carta de guardián del cristal",
     "description": "Carta de combate de tipo roca",
     "price": 150
   },
   {
     "id": 5,
     "name": "Necromante Sombrío",
-    "img": "https://ibb.co/ycjFLgLY",
+    "img": "images/necromante-sombrío.png",
     "alternativeText": "carta de necromante sombrío",
     "description": "Carta de combate de tipo conjurador",
     "price": 350

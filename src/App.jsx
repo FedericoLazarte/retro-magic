@@ -1,5 +1,6 @@
 import "./App.css";
-import Layout from "./components/layout/Layout";
+import CardContainer from "./components/card-container/CardContainer";
+import Layout from "./components/layouts/Layout";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           exercitationem vitae, reiciendis et consequuntur tempore veritatis,
           alias magnam placeat!
         </p>
+        <CardContainer />
       </Layout>
     </>
   );
