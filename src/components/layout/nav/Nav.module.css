@@ -5,9 +5,15 @@
 }
 
 .link {
+  display: inline-block;
   text-decoration: none;
   font-size: 1.6rem;
   color: inherit;
   padding: 2rem;
   font-weight: bold;
+}
+
+.link:hover {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--border-color);
 }
