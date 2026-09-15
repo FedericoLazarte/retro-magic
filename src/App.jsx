@@ -1,12 +1,18 @@
 import "./App.css";
-import Footer from "./components/layout/footer/Footer";
-import Header from "./components/layout/header/Header";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
     <>
-      <Header />
-      <Footer />
+      <Layout>
+        <h1>Bienvenido a la tienda de Retro Magic</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+          corrupti corporis delectus quia esse beatae est omnis! A ex laborum
+          exercitationem vitae, reiciendis et consequuntur tempore veritatis,
+          alias magnam placeat!
+        </p>
+      </Layout>
     </>
   );
 }
