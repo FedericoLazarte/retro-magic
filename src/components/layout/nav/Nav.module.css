@@ -1,0 +1,13 @@
+.list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: inherit;
+  padding: 2rem;
+  font-weight: bold;
+}
