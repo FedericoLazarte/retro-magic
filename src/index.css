@@ -1,7 +1,10 @@
 :root {
   --main-background: #1f1f28;
+  --secondary-background: #2a2a37;
   --main-color: #c0a36e;
   --main-font: "Roboto Mono", monospace;
+  --secondary-font: "Press start 2P", system-ui;
+  --bnt-color: #7e9cd8;
 }
 
 * {
@@ -25,4 +28,22 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+h1 {
+  font-family: var(--secondary-font);
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--secondary-font);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  margin: 3rem 0;
 }
