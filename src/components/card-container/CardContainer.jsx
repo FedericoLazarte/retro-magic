@@ -22,6 +22,10 @@ function CardContainer() {
       .finally(() => setLoading(false));
   }, []);
 
+  const handleAddToCart = (name) => {
+    alert(`Agregaste la carta ${name}`);
+  };
+
   if (loading) {
     return <p>Cargando productos, por favor espere...</p>;
   }
@@ -32,7 +36,11 @@ function CardContainer() {
 
   return (
     <div className={styles.container}>
-      <CardList cards={cards} />
+      <CardList
+        cards={cards}
+        onAddToCart={handleAddToCart}
+        content="Agregar al carrito"
+      />
     </div>
   );
 }
