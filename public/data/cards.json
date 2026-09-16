@@ -2,41 +2,61 @@
   {
     "id": 1,
     "name": "Dracólito Ígnero",
-    "img": "images/dracólito-ígneo.png",
+    "img": "/images/dracólito-ígneo.png",
     "alternativeText": "carta de dracólito ígneo",
     "description": "Carta de combate de tipo dragón",
+    "type": "Combate",
+    "quantity": 100,
+    "element": "Fuego",
+    "rank": 4,
     "price": 500
   },
   {
     "id": 2,
     "name": "Barrera Dimensional",
-    "img": "images/barrera-dimensional.png",
+    "img": "/images/barrera-dimensional.png",
     "alternativeText": "carta de barrera dimensional",
     "description": "Carta de tipo trampa",
+    "type": "Trampa",
+    "quantity": 20,
+    "element": "Mágico",
+    "rank": "N/A",
     "price": 200
   },
   {
     "id": 3,
     "name": "Caballero del Vacío",
-    "img": "images/caballero-del-vacío.png",
+    "img": "/images/caballero-del-vacío.png",
     "alternativeText": "carta de cabellero del vacío",
     "description": "Carta de combate de tipo guerrero",
+    "type": "Combate",
+    "quantity": 30,
+    "element": "Oscuridad",
+    "rank": 4,
     "price": 400
   },
   {
     "id": 4,
     "name": "Guardián del Cristal",
-    "img": "images/guardián-del-cristal.png",
+    "img": "/images/guardián-del-cristal.png",
     "alternativeText": "carta de guardián del cristal",
     "description": "Carta de combate de tipo roca",
+    "type": "Combate",
+    "quantity": 200,
+    "element": "Tierra",
+    "rank": 4,
     "price": 150
   },
   {
     "id": 5,
     "name": "Necromante Sombrío",
-    "img": "images/necromante-sombrío.png",
+    "img": "/images/necromante-sombrío.png",
     "alternativeText": "carta de necromante sombrío",
     "description": "Carta de combate de tipo conjurador",
+    "type": "Combate",
+    "quantity": 10,
+    "element": "Oscuridad",
+    "rank": 5,
     "price": 350
   }
 ]
