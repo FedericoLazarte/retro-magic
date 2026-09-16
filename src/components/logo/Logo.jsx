@@ -1,11 +1,12 @@
 import styles from "./Logo.module.css";
+import { Link } from "react-router-dom";
 
 function Logo() {
   return (
     <div className={styles.logoContainer}>
-      <a href="" className={styles.logo}>
+      <Link to="/" className={styles.logo}>
         RetroMagic
-      </a>
+      </Link>
     </div>
   );
 }
