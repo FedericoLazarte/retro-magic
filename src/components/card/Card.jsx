@@ -9,7 +9,7 @@ function Card({
   alternativeText,
   description,
   price,
-  onAddToCart,
+  onClick,
   content,
 }) {
   return (
@@ -20,7 +20,7 @@ function Card({
       <h3>{name}</h3>
       <p>{description}</p>
       <p className={styles.price}>${price}</p>
-      <Button onClick={() => onAddToCart(name)}>{content}</Button>
+      <Button onClick={onClick}>{content}</Button>
     </article>
   );
 }

@@ -4,6 +4,7 @@ import Layout from "./components/layouts/Layout";
 import Contact from "./pages/contact/Contact";
 import Home from "./pages/home/Home.jsx";
 import Details from "./pages/details/Details.jsx";
+import Cart from "./pages/cart/Cart.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/details/:id" element={<Details />} />
+          <Route path="/cart" element={<Cart />} />
         </Route>
       </Routes>
     </>

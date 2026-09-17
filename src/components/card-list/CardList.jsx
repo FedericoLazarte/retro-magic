@@ -1,12 +1,13 @@
 import Card from "../card/Card";
+import styles from "./CardList.module.css";
 
-function CardList({ cards, onAddToCart, content }) {
+function CardList({ cards, onClick, content }) {
   return (
-    <>
+    <div className={styles.container}>
       {cards.map((c) => (
-        <Card key={c.id} {...c} onAddToCart={onAddToCart} content={content} />
+        <Card key={c.id} {...c} onClick={() => onClick(c)} content={content} />
       ))}
-    </>
+    </div>
   );
 }
 
