@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import CardList from "../card-list/CardList";
-import styles from "./CardContainer.module.css";
+import { useCart } from "../../context/CartContext";
 
 function CardContainer() {
   const [cards, setCards] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const { addToCart } = useCart();
 
   useEffect(() => {
     fetch("/data/cards.json")
@@ -22,8 +24,9 @@ function CardContainer() {
       .finally(() => setLoading(false));
   }, []);
 
-  const handleAddToCart = (name) => {
-    alert(`Agregaste la carta ${name}`);
+  const handleAddToCart = (card) => {
+    addToCart(card, card.quantity);
+    alert(`Agregaste la carta ${card.name}`);
   };
 
   if (loading) {
@@ -35,13 +38,13 @@ function CardContainer() {
   }
 
   return (
-    <div className={styles.container}>
+    <>
       <CardList
         cards={cards}
-        onAddToCart={handleAddToCart}
+        onClick={handleAddToCart}
         content="Agregar al carrito"
       />
-    </div>
+    </>
   );
 }
 
