@@ -1,7 +1,7 @@
 import styles from "./ContactForm.module.css";
 import Button from "../button/Button.jsx";
 
-function FormContact({ dataForm, onSubmit, onChangeData }) {
+function ContactForm({ dataForm, onSubmit, onChangeData }) {
   return (
     <form action="" className={styles.contactForm} onSubmit={onSubmit}>
       <div className={styles.formGroup}>
@@ -44,4 +44,4 @@ function FormContact({ dataForm, onSubmit, onChangeData }) {
   );
 }
 
-export default FormContact;
+export default ContactForm;

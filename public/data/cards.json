@@ -6,7 +6,7 @@
     "alternativeText": "carta de dracólito ígneo",
     "description": "Carta de combate de tipo dragón",
     "type": "Combate",
-    "quantity": 100,
+    "stock": 100,
     "element": "Fuego",
     "rank": 4,
     "price": 500
@@ -18,7 +18,7 @@
     "alternativeText": "carta de barrera dimensional",
     "description": "Carta de tipo trampa",
     "type": "Trampa",
-    "quantity": 20,
+    "stock": 20,
     "element": "Mágico",
     "rank": "N/A",
     "price": 200
@@ -30,7 +30,7 @@
     "alternativeText": "carta de cabellero del vacío",
     "description": "Carta de combate de tipo guerrero",
     "type": "Combate",
-    "quantity": 30,
+    "stock": 30,
     "element": "Oscuridad",
     "rank": 4,
     "price": 400
@@ -42,7 +42,7 @@
     "alternativeText": "carta de guardián del cristal",
     "description": "Carta de combate de tipo roca",
     "type": "Combate",
-    "quantity": 200,
+    "stock": 200,
     "element": "Tierra",
     "rank": 4,
     "price": 150
@@ -54,7 +54,7 @@
     "alternativeText": "carta de necromante sombrío",
     "description": "Carta de combate de tipo conjurador",
     "type": "Combate",
-    "quantity": 10,
+    "stock": 10,
     "element": "Oscuridad",
     "rank": 5,
     "price": 350

@@ -17,3 +17,9 @@
   color: var(--secondary-color);
   border-bottom: 2px solid var(--border-color);
 }
+
+.count {
+  background-color: #c47463;
+  border-radius: 50%;
+  padding: 0.5rem;
+}

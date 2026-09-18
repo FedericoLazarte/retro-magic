@@ -8,7 +8,7 @@ function CardDetails({
   alternativeText,
   description,
   type,
-  quantity,
+  stock,
   element,
   rank,
   price,
@@ -25,7 +25,7 @@ function CardDetails({
         <h3>{name}</h3>
         <p>{description}</p>
         <p>Carta de tipo {type}</p>
-        <p>Cantidad disponible: {quantity}</p>
+        <p>Cantidad disponible: {stock}</p>
         <p>Elemento de la carta: {element}</p>
         <p>Ranking: {rank}</p>
         <p>Precio de venta ${price}</p>

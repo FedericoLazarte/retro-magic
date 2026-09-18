@@ -9,8 +9,8 @@ function Card({
   alternativeText,
   description,
   price,
-  onClick,
-  content,
+  children,
+ 
 }) {
   return (
     <article className={styles.card}>
@@ -20,7 +20,7 @@ function Card({
       <h3>{name}</h3>
       <p>{description}</p>
       <p className={styles.price}>${price}</p>
-      <Button onClick={onClick}>{content}</Button>
+      {children}
     </article>
   );
 }

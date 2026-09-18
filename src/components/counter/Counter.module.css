@@ -1,0 +1,12 @@
+.btnCountContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.count {
+  padding: 1.5rem;
+  border: 2px solid var(--border-color);
+  border-radius: 1rem;
+  margin: 0 1rem;
+}

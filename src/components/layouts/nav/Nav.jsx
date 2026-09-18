@@ -21,7 +21,10 @@ function Nav() {
         </li>
         <li>
           <Link to="/cart" className={styles.link}>
-            🛒 {totalCards > 0 && <span>{totalCards}</span>}
+            🛒{" "}
+            {totalCards > 0 && (
+              <span className={styles.count}>{totalCards}</span>
+            )}
           </Link>
         </li>
       </ul>
