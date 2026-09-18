@@ -5,6 +5,7 @@ import Contact from "./pages/contact/Contact";
 import Home from "./pages/home/Home.jsx";
 import Details from "./pages/details/Details.jsx";
 import Cart from "./pages/cart/Cart.jsx";
+import Checkout from "./pages/checkout/Checkout.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/details/:id" element={<Details />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Route>
       </Routes>
     </>

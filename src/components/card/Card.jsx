@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Button from "../button/Button";
 import styles from "./Card.module.css";
 
 function Card({
@@ -10,7 +9,6 @@ function Card({
   description,
   price,
   children,
- 
 }) {
   return (
     <article className={styles.card}>
