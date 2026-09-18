@@ -1,9 +1,23 @@
 import { useCart } from "../../context/CartContext";
 import styles from "./Checkout.module.css";
+import Button from "../../components/button/Button.jsx";
+import { useNavigate } from "react-router-dom";
 
 function Checkout() {
-  const { cart, getCartTotal } = useCart();
+  const { cart, getCartTotal, clearCart } = useCart();
   const total = getCartTotal();
+  const navigate = useNavigate();
+
+  const handleToCart = () => {
+    navigate("/cart");
+  };
+
+  const handleBuy = () => {
+    alert("Compra realizada con éxito.");
+    clearCart();
+    navigate("/");
+  };
+
   return (
     <>
       <h1>Checkout</h1>
@@ -17,6 +31,10 @@ function Checkout() {
           </div>
         ))}
         <p className={styles.total}>Total: ${total}</p>
+      </div>
+      <div className={styles.btnContainer}>
+        <Button onClick={handleBuy}>Comprar</Button>
+        <Button onClick={handleToCart}>Volver al carrito</Button>
       </div>
     </>
   );

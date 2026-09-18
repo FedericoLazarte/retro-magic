@@ -11,17 +11,25 @@
   color: inherit;
   padding: 2rem;
   font-weight: bold;
+
+  background-image: linear-gradient(var(--border-color), var(--border-color));
+  background-position: 50% calc(100% - 1.5rem);
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition:
+    background-size 0.3s ease,
+    color 0.2s ease;
 }
 
 .link:hover {
   color: var(--secondary-color);
-  border-bottom: 2px solid var(--border-color);
+  background-size: 100% 2px;
 }
 
 .count {
   background-color: #c47463;
   border-radius: 50%;
   padding: 0.5rem;
-  text-align: centerr;
+  text-align: center;
   font-size: 1rem;
 }

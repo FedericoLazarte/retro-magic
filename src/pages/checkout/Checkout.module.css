@@ -40,3 +40,11 @@
   padding: 2rem 0;
   color: var(--btn-color);
 }
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
