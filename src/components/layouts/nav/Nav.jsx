@@ -1,31 +1,42 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./Nav.module.css";
 import { useCart } from "../../../context/CartContext";
+import { FaShoppingCart } from "react-icons/fa";
 
 function Nav() {
   const { getCartQuantity } = useCart();
   const totalCards = getCartQuantity();
 
+  const getClassName = ({ isActive }) => {
+    const classes = [styles.link];
+
+    if (isActive) {
+      classes.push(styles.active);
+    }
+
+    return classes.join(" ");
+  };
+
   return (
     <nav>
       <ul className={styles.list}>
         <li>
-          <Link to="/" className={styles.link}>
+          <NavLink to="/" className={getClassName}>
             Inicio
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/contact" className={styles.link}>
+          <NavLink to="/contact" className={getClassName}>
             Contacto
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/cart" className={styles.link}>
-            🛒{" "}
+          <NavLink to="/cart" className={getClassName}>
+            <FaShoppingCart/>{" "}
             {totalCards > 0 && (
               <span className={styles.count}>{totalCards}</span>
             )}
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>
