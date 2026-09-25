@@ -1,5 +1,5 @@
 import styles from "./ContactForm.module.css";
-import Button from "../button/Button.jsx";
+import Button from "../Button/Button.jsx";
 
 function ContactForm({ dataForm, onSubmit, onChangeData }) {
   return (

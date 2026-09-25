@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CardDetails from "../card-details/CardDetails";
+import CardDetails from "../CardDetails/CardDetails";
 
 function CardDetailsContainer() {
   const { id } = useParams();

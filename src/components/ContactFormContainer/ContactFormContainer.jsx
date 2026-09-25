@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ContactForm from "../form/ContactForm.jsx";
+import ContactForm from "../Form/ContactForm.jsx";
 
 function ContactFormContainer() {
   const [dataForm, setDataForm] = useState({

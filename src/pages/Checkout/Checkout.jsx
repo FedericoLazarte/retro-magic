@@ -1,6 +1,6 @@
 import { useCart } from "../../context/CartContext";
 import styles from "./Checkout.module.css";
-import Button from "../../components/button/Button.jsx";
+import Button from "../../components/Button/Button.jsx";
 import { useNavigate } from "react-router-dom";
 
 function Checkout() {

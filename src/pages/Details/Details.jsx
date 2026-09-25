@@ -1,4 +1,4 @@
-import CardDetailsContainer from "../../components/card-details-container/CardDetailsContainer";
+import CardDetailsContainer from "../../components/CardDetailsContainer/CardDetailsContainer";
 
 function Details() {
   return (

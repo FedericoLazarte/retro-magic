@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Card from "../card/Card";
-import Button from "../button/Button";
+import Card from "../Card/Card";
+import Button from "../Button/Button";
 import { useCart } from "../../context/CartContext";
 import styles from "./CardContainer.module.css";
-import Counter from "../counter/Counter.jsx";
+import Counter from "../Counter/Counter.jsx";
 
 function CardContainer() {
   const [cards, setCards] = useState([]);

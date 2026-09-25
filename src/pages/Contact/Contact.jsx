@@ -1,4 +1,4 @@
-import ContactFormContainer from "../../components/contact-form-container/ContactFormContainer";
+import ContactFormContainer from "../../components/ContactFormContainer/ContactFormContainer";
 import styles from "./Contact.module.css";
 
 function Contact() {

@@ -1,4 +1,4 @@
-import CardContainer from "../../components/card-container/CardContainer";
+import CardContainer from "../../components/CardContainer/CardContainer";
 import styles from "./Home.module.css";
 
 function Home() {

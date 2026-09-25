@@ -1,5 +1,5 @@
-import Logo from "../../logo/Logo";
-import Nav from "../nav/Nav";
+import Logo from "../../Logo/Logo";
+import Nav from "../Nav/Nav";
 import styles from "./Header.module.css";
 
 function Header() {

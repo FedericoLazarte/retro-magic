@@ -1,6 +1,6 @@
-import Card from "../../components/card/Card";
-import Counter from "../../components/counter/Counter";
-import Button from "../../components/button/Button";
+import Card from "../../components/Card/Card";
+import Counter from "../../components/Counter/Counter";
+import Button from "../../components/Button/Button";
 import { useCart } from "../../context/CartContext";
 import styles from "./Cart.module.css";
 import { useNavigate } from "react-router-dom";

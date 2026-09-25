@@ -1,5 +1,4 @@
 import styles from "./CardDetails.module.css";
-import Button from "../button/Button.jsx";
 import { Link } from "react-router-dom";
 
 function CardDetails({
