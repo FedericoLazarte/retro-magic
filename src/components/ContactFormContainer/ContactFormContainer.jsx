@@ -8,9 +8,16 @@ function ContactFormContainer() {
     message: "",
   });
 
+  const [status, setStatus] = useState("typing");
+
   const handleSubmitForm = (e) => {
     e.preventDefault();
-    alert("Se envío el formulario");
+    setStatus("submitting");
+
+    setTimeout(() => {
+      setStatus("success");
+      alert("Se envío el formulario");
+    }, 1500);
   };
 
   const handleChangeData = (e) => {
@@ -26,6 +33,7 @@ function ContactFormContainer() {
       dataForm={dataForm}
       onSubmit={handleSubmitForm}
       onChangeData={handleChangeData}
+      status={status}
     />
   );
 }

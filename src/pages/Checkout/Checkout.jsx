@@ -33,8 +33,12 @@ function Checkout() {
         <p className={styles.total}>Total: ${total}</p>
       </div>
       <div className={styles.btnContainer}>
-        <Button onClick={handleBuy}>Comprar</Button>
-        <Button onClick={handleToCart}>Volver al carrito</Button>
+        <Button onClick={handleBuy} type="button">
+          Comprar
+        </Button>
+        <Button onClick={handleToCart} type="button">
+          Volver al carrito
+        </Button>
       </div>
     </>
   );

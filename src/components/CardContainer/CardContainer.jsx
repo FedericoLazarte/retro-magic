@@ -14,16 +14,23 @@ function CardContainer() {
   const { addToCart } = useCart();
 
   useEffect(() => {
-    fetch("/data/cards.json")
-      .then((res) => {
-        if (!res.ok) {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/data/cards.json");
+
+        if (!response.ok) {
           throw new Error("No se pudo cargar la información de las cartas");
         }
-        return res.json();
-      })
-      .then((data) => setCards(data))
-      .catch((error) => setError(error.message))
-      .finally(() => setLoading(false));
+
+        const data = await response.json();
+        setCards(data);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
   }, []);
 
   const handleAddToCart = (card, quantity) => {
@@ -60,7 +67,7 @@ function CardContainer() {
         const count = counts[card.id] ?? 0;
         return (
           <Card key={card.id} {...card}>
-            <Button onClick={() => handleAddToCart(card, count)}>
+            <Button onClick={() => handleAddToCart(card, count)} type="button">
               Agregar al carrito
             </Button>
             <Counter
