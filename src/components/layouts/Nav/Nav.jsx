@@ -32,7 +32,7 @@ function Nav() {
         </li>
         <li>
           <NavLink to="/cart" className={getClassName}>
-            <FaShoppingCart/>{" "}
+            <FaShoppingCart />{" "}
             {totalCards > 0 && (
               <span className={styles.count}>{totalCards}</span>
             )}

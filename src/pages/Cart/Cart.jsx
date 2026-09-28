@@ -47,14 +47,20 @@ function Cart() {
                 onIncrease={() => handleIncrease(card)}
                 onDecrease={() => handleDecrease(card)}
               />
-              <Button onClick={() => handleRemove(card)}>Eliminar</Button>
+              <Button onClick={() => handleRemove(card)} type="button">
+                Eliminar
+              </Button>
             </Card>
           ))}
         </div>
         <div className={styles.btnContainer}>
-          <Button onClick={handleBuy}>Comprar</Button>
+          <Button onClick={handleBuy} type="button">
+            Comprar
+          </Button>
           {cart.length > 1 && (
-            <Button onClick={clearCart}>Vaciar carrito</Button>
+            <Button onClick={clearCart} type="button">
+              Vaciar carrito
+            </Button>
           )}
         </div>
       </section>

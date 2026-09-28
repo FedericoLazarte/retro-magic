@@ -4,9 +4,13 @@ import styles from "./Counter.module.css";
 function Counter({ count, onIncrease, onDecrease }) {
   return (
     <div className={styles.btnCountContainer}>
-      <Button onClick={onDecrease}>-</Button>
+      <Button onClick={onDecrease} type="button">
+        -
+      </Button>
       <p className={styles.count}>{count}</p>
-      <Button onClick={onIncrease}>+</Button>
+      <Button onClick={onIncrease} type="button">
+        +
+      </Button>
     </div>
   );
 }
