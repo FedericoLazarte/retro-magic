@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import styles from "./Card.module.css";
+import styles from "./Product.module.css";
 
-function Card({
+function Product({
   id,
   name,
   img,
@@ -23,4 +23,4 @@ function Card({
   );
 }
 
-export default Card;
+export default Product;

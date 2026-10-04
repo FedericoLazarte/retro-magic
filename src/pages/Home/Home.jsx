@@ -1,4 +1,4 @@
-import CardContainer from "../../components/CardContainer/CardContainer";
+import ProductContainer from "../../components/product/ProductContainer/ProductContainer";
 import styles from "./Home.module.css";
 
 function Home() {
@@ -22,7 +22,7 @@ function Home() {
       </p>
       <section className={styles.section}>
         <h2>Cartas a la Venta</h2>
-        <CardContainer />
+        <ProductContainer />
       </section>
     </>
   );

@@ -1,5 +1,5 @@
 import styles from "./ContactForm.module.css";
-import Button from "../Button/Button.jsx";
+import Button from "../../ui/Button/Button.jsx";
 
 function ContactForm({ dataForm, onSubmit, onChangeData, status }) {
   if (status === "success") {

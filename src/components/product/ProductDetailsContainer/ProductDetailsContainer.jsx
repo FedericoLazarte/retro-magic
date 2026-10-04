@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CardDetails from "../CardDetails/CardDetails";
+import ProductDetails from "../ProductDetails/ProductDetails";
 
-function CardDetailsContainer() {
+function ProductDetailsContainer() {
   const { id } = useParams();
   const [card, setCard] = useState(null);
 
   useEffect(() => {
-    fetch("/data/cards.json")
+    fetch("/data/card/cards.json")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Ha surgido un error al realizar la petición.");
@@ -31,9 +31,9 @@ function CardDetailsContainer() {
 
   return (
     <>
-      <CardDetails {...card} />
+      <ProductDetails {...card} />
     </>
   );
 }
 
-export default CardDetailsContainer;
+export default ProductDetailsContainer;

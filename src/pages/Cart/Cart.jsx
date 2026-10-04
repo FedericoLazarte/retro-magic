@@ -1,6 +1,6 @@
-import Card from "../../components/Card/Card";
-import Counter from "../../components/Counter/Counter";
-import Button from "../../components/Button/Button";
+import Product from "../../components/product/Product/Product";
+import Counter from "../../components/ui/Counter/Counter";
+import Button from "../../components/ui/Button/Button";
 import { useCart } from "../../context/CartContext";
 import styles from "./Cart.module.css";
 import { useNavigate } from "react-router-dom";
@@ -41,7 +41,7 @@ function Cart() {
       <section className={styles.section}>
         <div className={styles.container}>
           {cart.map((card) => (
-            <Card key={card.id} {...card}>
+            <Product key={card.id} {...card}>
               <Counter
                 count={card.count}
                 onIncrease={() => handleIncrease(card)}
@@ -50,7 +50,7 @@ function Cart() {
               <Button onClick={() => handleRemove(card)} type="button">
                 Eliminar
               </Button>
-            </Card>
+            </Product>
           ))}
         </div>
         <div className={styles.btnContainer}>

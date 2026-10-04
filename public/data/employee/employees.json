@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Federico",
+    "lastname": "Lazarte",
+    "age": 33,
+    "position": "Desarrollador backend",
+    "imgUrl": "/images/avatars/profile-man.png"
+  },
+  {
+    "id": 2,
+    "name": "Malén",
+    "lastname": "Varco",
+    "age": 33,
+    "position": "Desarrollador frontend",
+    "imgUrl": "/images/avatars/profile-woman.png"
+  },
+  {
+    "id": 3,
+    "name": "Camila",
+    "lastname": "Angelone",
+    "age": 29,
+    "position": "QA",
+    "imgUrl": "/images/avatars/profile-woman.png"
+  }
+]

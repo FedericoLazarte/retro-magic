@@ -1,7 +1,7 @@
-import styles from "./CardDetails.module.css";
+import styles from "./ProductDetails.module.css";
 import { Link } from "react-router-dom";
 
-function CardDetails({
+function ProductDetails({
   name,
   img,
   alternativeText,
@@ -33,4 +33,4 @@ function CardDetails({
   );
 }
 
-export default CardDetails;
+export default ProductDetails;

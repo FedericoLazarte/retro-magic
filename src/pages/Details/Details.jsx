@@ -1,10 +1,10 @@
-import CardDetailsContainer from "../../components/CardDetailsContainer/CardDetailsContainer";
+import ProductDetailsContainer from "../../components/product/ProductDetailsContainer/ProductDetailsContainer";
 
 function Details() {
   return (
     <>
       <h1>Ver carta</h1>
-      <CardDetailsContainer />
+      <ProductDetailsContainer />
     </>
   );
 }

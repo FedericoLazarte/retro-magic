@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Card from "../Card/Card";
-import Button from "../Button/Button";
-import { useCart } from "../../context/CartContext";
-import styles from "./CardContainer.module.css";
-import Counter from "../Counter/Counter.jsx";
+import Product from "../Product/Product";
+import Button from "../../ui/Button/Button";
+import { useCart } from "../../../context/CartContext";
+import styles from "./ProductContainer.module.css";
+import Counter from "../../ui/Counter/Counter.jsx";
 
 function CardContainer() {
   const [cards, setCards] = useState([]);
@@ -16,7 +16,7 @@ function CardContainer() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/data/cards.json");
+        const response = await fetch("/data/card/cards.json");
 
         if (!response.ok) {
           throw new Error("No se pudo cargar la información de las cartas");
@@ -66,7 +66,7 @@ function CardContainer() {
       {cards.map((card) => {
         const count = counts[card.id] ?? 0;
         return (
-          <Card key={card.id} {...card}>
+          <Product key={card.id} {...card}>
             <Button onClick={() => handleAddToCart(card, count)} type="button">
               Agregar al carrito
             </Button>
@@ -75,7 +75,7 @@ function CardContainer() {
               onIncrease={() => handleIncrease(card)}
               onDecrease={() => handleDecrease(card)}
             />
-          </Card>
+          </Product>
         );
       })}
     </div>
