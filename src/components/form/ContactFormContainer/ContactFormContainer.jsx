@@ -16,7 +16,6 @@ function ContactFormContainer() {
 
     setTimeout(() => {
       setStatus("success");
-      alert("Se envío el formulario");
     }, 1500);
   };
 
