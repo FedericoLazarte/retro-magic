@@ -5,34 +5,41 @@ import ProductDetails from "../ProductDetails/ProductDetails";
 function ProductDetailsContainer() {
   const { id } = useParams();
   const [card, setCard] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/data/card/cards.json")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Ha surgido un error al realizar la petición.");
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/data/card/cards.json");
+
+        if (!response.ok) {
+          throw new Error("No se pudo obtener información del producto.");
         }
-        return res.json();
-      })
-      .then((data) => {
-        const getCard = data.find((p) => p.id === parseInt(id));
-        setCard(getCard);
-      })
-      .catch((error) => console.error("Error al cargar el producto:", error));
+
+        const data = await response.json();
+
+        const card = data.find((p) => p.id === parseInt(id));
+        setCard(card);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
   }, [id]);
 
-  if (!card) {
-    return <h2>Cargando detalle del producto...</h2>;
+  if (loading) {
+    return <p>Cargando detalle del producto...</p>;
   }
 
-  if (!card.id) {
-    return <h2>Producto no encontrado</h2>;
+  if (error) {
+    return <p>Error: {error}</p>;
   }
 
   return (
-    <>
-      <ProductDetails {...card} />
-    </>
+    <>{card ? <ProductDetails {...card} /> : <p>Producto no encontrado</p>}</>
   );
 }
 

@@ -24,8 +24,8 @@ function CardContainer() {
 
         const data = await response.json();
         setCards(data);
-      } catch (error) {
-        setError(error);
+      } catch (err) {
+        setError(err.message);
       } finally {
         setLoading(false);
       }

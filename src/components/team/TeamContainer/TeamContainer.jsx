@@ -19,8 +19,8 @@ function TeamContainer({ title }) {
 
         const data = await response.json();
         setEmployees(data);
-      } catch (error) {
-        setError(error.message);
+      } catch (err) {
+        setError(err.message);
       } finally {
         setLoading(false);
       }
