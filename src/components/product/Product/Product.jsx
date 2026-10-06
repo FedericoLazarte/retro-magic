@@ -1,19 +1,11 @@
 import { Link } from "react-router-dom";
 import styles from "./Product.module.css";
 
-function Product({
-  id,
-  name,
-  img,
-  alternativeText,
-  description,
-  price,
-  children,
-}) {
+function Product({ id, name, urlImg, description, price, children }) {
   return (
     <article className={styles.card}>
       <Link to={`/details/${id}`}>
-        <img src={img} alt={alternativeText} className={styles.img} />
+        <img src={urlImg} alt={`Foto de ${name}`} className={styles.img} />
       </Link>
       <h3>{name}</h3>
       <p>{description}</p>

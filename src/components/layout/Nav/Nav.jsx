@@ -26,8 +26,8 @@ function Nav() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contact" className={getClassName}>
-            Contacto
+          <NavLink to="/newproduct" className={getClassName}>
+            Nuevo producto
           </NavLink>
         </li>
         <li>

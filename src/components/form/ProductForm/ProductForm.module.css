@@ -33,3 +33,13 @@
   outline: none;
   border-color: var(--border-color);
 }
+
+.success {
+  text-align: center;
+  color: #a6da95;
+}
+
+.error {
+  color: #ed8796;
+  margin-bottom: 2rem;
+}

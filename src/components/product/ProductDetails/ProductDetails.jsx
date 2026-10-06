@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 
 function ProductDetails({
   name,
-  img,
-  alternativeText,
+  urlImg,
   description,
   type,
   stock,
@@ -15,7 +14,7 @@ function ProductDetails({
   return (
     <div className={styles.cardContainer}>
       <div className={styles.imgContainer}>
-        <img src={img} alt={alternativeText} />
+        <img src={urlImg} alt={`Foto de ${name}`} />
       </div>
       <div className={styles.detailsContainer}>
         <Link to="/" className={styles.closeBtn}>
