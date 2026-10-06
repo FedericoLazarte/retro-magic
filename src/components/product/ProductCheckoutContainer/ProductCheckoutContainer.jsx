@@ -1,5 +1,5 @@
 import { useCart } from "../../../context/CartContext";
-import ProductCheckout from "../ProductCheckout/ProductCheckout";
+import ProductCheckoutList from "../ProductCheckoutList/ProductCheckoutList.jsx";
 import { useNavigate } from "react-router-dom";
 
 function ProductCheckoutContainer() {
@@ -16,7 +16,7 @@ function ProductCheckoutContainer() {
   };
 
   return (
-    <ProductCheckout
+    <ProductCheckoutList
       cart={cart}
       total={total}
       onBuy={handleBuy}
