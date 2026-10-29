@@ -7,7 +7,7 @@ function CardContainer() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const [counts, setCounts] = useState({});
-  const [isFavorite, setIsFavorite] = useState(false);
+  const [favorites, setFavorites] = useState({});
 
   const { addToCart } = useCart();
 
@@ -52,8 +52,11 @@ function CardContainer() {
     });
   };
 
-  const handleToggleFavorite = () => {
-    setIsFavorite(!isFavorite);
+  const handleToggleFavorite = (card) => {
+    setFavorites((prev) => ({
+      ...prev,
+      [card.id]: !prev[card.id],
+    }));
   };
 
   if (loading) return <p>Cargando productos, por favor espere...</p>;
@@ -66,7 +69,7 @@ function CardContainer() {
       onAddToCart={handleAddToCart}
       onIncrease={handleIncrease}
       onDecrease={handleDecrease}
-      isFavorite={isFavorite}
+      favorites={favorites}
       onToggleFavorite={handleToggleFavorite}
     />
   );
