@@ -5,7 +5,7 @@
     "lastname": "Lazarte",
     "age": 33,
     "position": "Desarrollador backend",
-    "imgUrl": "/images/avatars/profile-man.png"
+    "imgUrl": "https://i.ibb.co/8L3WdkWq/profile-man.png"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "lastname": "Varco",
     "age": 33,
     "position": "Desarrollador frontend",
-    "imgUrl": "/images/avatars/profile-woman.png"
+    "imgUrl": "https://i.ibb.co/chrtzfdQ/profile-woman.png"
   },
   {
     "id": 3,
@@ -21,6 +21,6 @@
     "lastname": "Angelone",
     "age": 29,
     "position": "QA",
-    "imgUrl": "/images/avatars/profile-woman.png"
+    "imgUrl": "https://i.ibb.co/chrtzfdQ/profile-woman.png"
   }
 ]

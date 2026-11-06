@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Dracólito Ígnero",
-    "urlImg": "/images/cards/dracólito-ígneo.png",
+    "urlImg": "https://i.ibb.co/Fkc75sXZ/drac-lito-gneo.png",
     "description": "Carta de combate de tipo dragón",
     "type": "Combate",
     "stock": 100,
@@ -13,7 +13,7 @@
   {
     "id": 2,
     "name": "Barrera Dimensional",
-    "urlImg": "/images/cards/barrera-dimensional.png",
+    "urlImg": "https://i.ibb.co/ynvYBwwL/barrera-dimensional.png",
     "description": "Carta de tipo trampa",
     "type": "Trampa",
     "stock": 20,
@@ -24,7 +24,7 @@
   {
     "id": 3,
     "name": "Caballero del Vacío",
-    "urlImg": "/images/cards/caballero-del-vacío.png",
+    "urlImg": "https://i.ibb.co/TBBhmTqt/caballero-del-vac-o.png",
     "description": "Carta de combate de tipo guerrero",
     "type": "Combate",
     "stock": 30,
@@ -35,7 +35,7 @@
   {
     "id": 4,
     "name": "Guardián del Cristal",
-    "urlImg": "/images/cards/guardián-del-cristal.png",
+    "urlImg": "https://i.ibb.co/DDSrP19r/guardi-n-del-cristal.png",
     "description": "Carta de combate de tipo roca",
     "type": "Combate",
     "stock": 200,
@@ -46,7 +46,7 @@
   {
     "id": 5,
     "name": "Necromante Sombrío",
-    "urlImg": "/images/cards/necromante-sombrío.png",
+    "urlImg": "https://i.ibb.co/67bgDWwL/necromante-sombr-o.png",
     "description": "Carta de combate de tipo conjurador",
     "type": "Combate",
     "stock": 10,
