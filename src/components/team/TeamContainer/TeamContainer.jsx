@@ -8,29 +8,6 @@ function TeamContainer({ title }) {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  /*useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/data/employee/employees.json");
-
-        if (!response.ok) {
-          throw new Error(
-            "No se ha podido cargar la información de los empleados.",
-          );
-        }
-
-        const data = await response.json();
-        setEmployees(data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);*/
-
   useEffect(() => {
     const employeesDB = collection(db, "employees");
 

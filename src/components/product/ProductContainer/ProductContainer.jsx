@@ -12,26 +12,6 @@ function CardContainer() {
   const [favorites, setFavorites] = useState({});
 
   const { addToCart } = useCart();
-  /*
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/data/card/cards.json");
-
-        if (!response.ok) {
-          throw new Error("No se pudo cargar la información de las cartas");
-        }
-
-        const data = await response.json();
-        setCards(data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);  */
 
   useEffect(() => {
     const cardsDB = collection(db, "cards");
