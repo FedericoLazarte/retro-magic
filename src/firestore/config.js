@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCop-zzZYWwmu-g8-w5qrhrTs68RH8Jn0U",
+  apiKey: import.meta.env.FIRESTORE_API_KEY,
   authDomain: "retro-card-7c366.firebaseapp.com",
   projectId: "retro-card-7c366",
   storageBucket: "retro-card-7c366.firebasestorage.app",
