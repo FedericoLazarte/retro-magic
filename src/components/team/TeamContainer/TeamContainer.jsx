@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import TeamList from "../TeamList/TeamList";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../../firestore/config";
 
 function TeamContainer({ title }) {
   const [employees, setEmployees] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  /*useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("/data/employee/employees.json");
@@ -27,6 +29,21 @@ function TeamContainer({ title }) {
     };
 
     fetchData();
+  }, []);*/
+
+  useEffect(() => {
+    const employeesDB = collection(db, "employees");
+
+    getDocs(employeesDB)
+      .then((res) => {
+        setEmployees(
+          res.docs.map((d) => {
+            return { ...d.data(), id: d.id };
+          }),
+        );
+      })
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
   }, []);
 
   if (loading) {

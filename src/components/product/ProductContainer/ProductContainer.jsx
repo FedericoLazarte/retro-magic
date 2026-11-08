@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useCart } from "../../../context/CartContext";
 import ProductList from "../ProductList/ProductList.jsx";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../../firestore/config";
 
 function CardContainer() {
   const [cards, setCards] = useState([]);
@@ -10,7 +12,7 @@ function CardContainer() {
   const [favorites, setFavorites] = useState({});
 
   const { addToCart } = useCart();
-
+  /*
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,6 +31,23 @@ function CardContainer() {
       }
     };
     fetchData();
+  }, []);  */
+
+  useEffect(() => {
+    const cardsDB = collection(db, "cards");
+
+    getDocs(cardsDB)
+      .then((res) => {
+        setCards(
+          res.docs.map((d) => {
+            return { ...d.data(), id: d.id };
+          }),
+        );
+      })
+      .catch((err) => setError(err.message))
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   const handleAddToCart = (card, quantity) => {
