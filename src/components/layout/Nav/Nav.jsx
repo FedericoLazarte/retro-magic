@@ -31,6 +31,11 @@ function Nav() {
           </NavLink>
         </li>
         <li>
+          <NavLink to="/products" className={getClassName}>
+            Productos
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="/cart" className={getClassName}>
             <FaShoppingCart />{" "}
             {totalCards > 0 && (

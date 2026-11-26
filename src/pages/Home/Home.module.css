@@ -8,9 +8,267 @@
   text-align: center;
 }
 
+.carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  border-radius: 12px;
+  border: 2px solid var(--border-color);
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary-background);
+  color: var(--main-color);
+  font-family: var(--secondary-font);
+  font-size: 4rem;
+}
+
+.arrowLeft,
+.arrowRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  background: var(--btn-color);
+  color: var(--main-background);
+  font-size: 2.4rem;
+  font-family: var(--main-font);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.arrowLeft:hover,
+.arrowRight:hover {
+  background: var(--btn-hover);
+}
+
+.arrowLeft {
+  left: 2rem;
+}
+.arrowRight {
+  right: 2rem;
+}
+
+.presentation {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.features {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.feature {
+  background: var(--secondary-background);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+  border-color: var(--btn-color);
+}
+
+.featureIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.feature p {
+  color: var(--secondary-color);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-top: 0.8rem;
+}
+
+.steps {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.step {
+  background: var(--secondary-background);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.stepNumber {
+  display: inline-block;
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+  color: var(--btn-color);
+  margin-bottom: 1rem;
+}
+
+.step p {
+  color: var(--secondary-color);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-top: 0.8rem;
+}
+
+.testimonials {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial {
+  background: var(--secondary-background);
+  border: 2px solid var(--border-color);
+  border-left: 4px solid var(--btn-color);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.testimonial p {
+  color: var(--main-color);
+  font-size: 1.4rem;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial footer {
+  color: var(--btn-color);
+  font-size: 1.2rem;
+  font-family: var(--secondary-font);
+}
+
+.cta {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  padding: 4rem 2rem;
+  background: var(--secondary-background);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.cta p {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.link {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--btn-color);
+  color: var(--main-background);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: var(--secondary-font);
+  font-size: 1.2rem;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.link:hover {
+  background: var(--btn-hover);
+  color: var(--main-background);
+}
+
 @media (max-width: 700px) {
+  .item {
+    height: 240px;
+    font-size: 2.4rem;
+  }
+
+  .arrowLeft,
+  .arrowRight {
+    width: 3.6rem;
+    height: 3.6rem;
+    font-size: 2rem;
+  }
+
+  .arrowLeft {
+    left: 1rem;
+  }
+  .arrowRight {
+    right: 1rem;
+  }
+
   .presentation {
-    font-size: 1.6rem;
-    padding: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0 1.5rem;
+  }
+
+  .feature p,
+  .step p {
+    font-size: 1.2rem;
+  }
+
+  .testimonial p {
+    font-size: 1.3rem;
+  }
+
+  .cta p {
+    font-size: 1.3rem;
+  }
+
+  .link {
+    font-size: 1rem;
+    padding: 0.8rem 1.4rem;
   }
 }
