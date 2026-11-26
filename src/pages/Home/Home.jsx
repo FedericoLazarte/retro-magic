@@ -1,9 +1,26 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firestore/config";
 
 function Home() {
   const trackRef = useRef(null);
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    const imagesDB = collection(db, "images");
+
+    getDocs(imagesDB)
+      .then((res) => {
+        setImages(
+          res.docs.map((d) => {
+            return { ...d.data(), id: d.id };
+          }),
+        );
+      })
+      .catch((error) => console.error(error.message));
+  }, []);
 
   const scroll = (dir) => {
     const track = trackRef.current;
@@ -13,27 +30,31 @@ function Home() {
 
   return (
     <>
-      <section className={styles.carousel}>
-        <button
-          className={styles.arrowLeft}
-          onClick={() => scroll(-1)}
-          aria-label="Anterior"
-        >
-          ‹
-        </button>
-        <div className={styles.track} ref={trackRef}>
-          <div className={styles.item}>1</div>
-          <div className={styles.item}>2</div>
-          <div className={styles.item}>3</div>
-        </div>
-        <button
-          className={styles.arrowRight}
-          onClick={() => scroll(1)}
-          aria-label="Siguiente"
-        >
-          ›
-        </button>
-      </section>
+      {images.length > 0 ? (
+        <section className={styles.carousel}>
+          <button
+            className={styles.arrowLeft}
+            onClick={() => scroll(-1)}
+            aria-label="Anterior"
+          >
+            ‹
+          </button>
+          <div className={styles.track} ref={trackRef}>
+            {images.map((i) => (
+              <div className={styles.item} key={i.id}>
+                <img src={i.url} alt={`Foto de carta`} />
+              </div>
+            ))}
+          </div>
+          <button
+            className={styles.arrowRight}
+            onClick={() => scroll(1)}
+            aria-label="Siguiente"
+          >
+            ›
+          </button>
+        </section>
+      ) : null}
 
       <h1>Bienvenido a la tienda de Retro Magic</h1>
       <p className={styles.presentation}>
