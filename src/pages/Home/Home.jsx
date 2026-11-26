@@ -1,9 +1,40 @@
-import ProductContainer from "../../components/product/ProductContainer/ProductContainer";
+import { useRef } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 
 function Home() {
+  const trackRef = useRef(null);
+
+  const scroll = (dir) => {
+    const track = trackRef.current;
+    if (!track) return;
+    track.scrollBy({ left: dir * track.clientWidth, behavior: "smooth" });
+  };
+
   return (
     <>
+      <section className={styles.carousel}>
+        <button
+          className={styles.arrowLeft}
+          onClick={() => scroll(-1)}
+          aria-label="Anterior"
+        >
+          ‹
+        </button>
+        <div className={styles.track} ref={trackRef}>
+          <div className={styles.item}>1</div>
+          <div className={styles.item}>2</div>
+          <div className={styles.item}>3</div>
+        </div>
+        <button
+          className={styles.arrowRight}
+          onClick={() => scroll(1)}
+          aria-label="Siguiente"
+        >
+          ›
+        </button>
+      </section>
+
       <h1>Bienvenido a la tienda de Retro Magic</h1>
       <p className={styles.presentation}>
         <b lang="en">Retro Magic</b> es una tienda especializada en cartas
@@ -20,9 +51,99 @@ function Home() {
         <b lang="en">Retro Magic</b>, no solo vendemos cartas: compartimos una
         cultura, una estética y una forma de vivir el juego.
       </p>
-      <section className={styles.section}>
-        <h2>Cartas a la Venta</h2>
-        <ProductContainer />
+
+      <section className={styles.features}>
+        <h2>¿Por qué elegirnos?</h2>
+        <div className={styles.featuresGrid}>
+          <div className={styles.feature}>
+            <span className={styles.featureIcon}>🎴</span>
+            <h3>Cartas originales</h3>
+            <p>
+              Producto oficial de Arcane Duel Masters, sin réplicas ni
+              imitaciones.
+            </p>
+          </div>
+          <div className={styles.feature}>
+            <span className={styles.featureIcon}>🚚</span>
+            <h3>Envíos a todo el país</h3>
+            <p>Despachamos en 24h con seguimiento incluido en cada pedido.</p>
+          </div>
+          <div className={styles.feature}>
+            <span className={styles.featureIcon}>🛡️</span>
+            <h3>Compra protegida</h3>
+            <p>Si la carta no es lo que esperabas, te devolvemos el dinero.</p>
+          </div>
+          <div className={styles.feature}>
+            <span className={styles.featureIcon}>⭐</span>
+            <h3>Atención personalizada</h3>
+            <p>
+              Te asesoramos para armar el mazo perfecto según tu estilo de
+              juego.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.steps}>
+        <h2>Cómo comprar</h2>
+        <div className={styles.stepsGrid}>
+          <div className={styles.step}>
+            <span className={styles.stepNumber}>01</span>
+            <h3>Explorá el catálogo</h3>
+            <p>
+              Navegá por las cartas disponibles y filtrá por tipo, rareza o
+              expansión.
+            </p>
+          </div>
+          <div className={styles.step}>
+            <span className={styles.stepNumber}>02</span>
+            <h3>Armá tu pedido</h3>
+            <p>
+              Agregá tus cartas favoritas al carrito y revisá el total antes de
+              pagar.
+            </p>
+          </div>
+          <div className={styles.step}>
+            <span className={styles.stepNumber}>03</span>
+            <h3>Recibí en tu casa</h3>
+            <p>Te enviamos el pedido con seguimiento y embalaje protegido.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.testimonials}>
+        <h2>Lo que dicen nuestros clientes</h2>
+        <div className={styles.testimonialsGrid}>
+          <blockquote className={styles.testimonial}>
+            <p>
+              "Las cartas llegaron impecables y el envío fue rapidísimo. Ya armé
+              mi primer mazo competitivo."
+            </p>
+            <footer>— Martín G., jugador competitivo</footer>
+          </blockquote>
+          <blockquote className={styles.testimonial}>
+            <p>
+              "La atención es de otro nivel. Me ayudaron a elegir cartas para mi
+              colección y quedé encantado."
+            </p>
+            <footer>— Lucía R., coleccionista</footer>
+          </blockquote>
+          <blockquote className={styles.testimonial}>
+            <p>
+              "El arte pixel art de las cartas es único. Se nota que la tienda
+              está hecha por fans."
+            </p>
+            <footer>— Diego M., jugador casual</footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <section className={styles.cta}>
+        <h2>¿Listo para empezar tu colección?</h2>
+        <p>Explorá el catálogo completo y encontrá tu próxima carta.</p>
+        <Link to="/products" className={styles.link}>
+          Ver cartas a la venta
+        </Link>
       </section>
     </>
   );

@@ -6,6 +6,7 @@ import Details from "./pages/Details/Details.jsx";
 import Cart from "./pages/Cart/Cart.jsx";
 import Checkout from "./pages/Checkout/Checkout.jsx";
 import NewProduct from "./pages/NewProduct/NewProduct.jsx";
+import ProductContainer from "./components/product/ProductContainer/ProductContainer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/newproduct" element={<NewProduct />} />
+          <Route path="/products" element={<ProductContainer />} />
           <Route path="/details/:id" element={<Details />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
