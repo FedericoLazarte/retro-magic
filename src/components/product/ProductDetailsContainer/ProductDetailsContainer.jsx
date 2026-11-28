@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductDetails from "../ProductDetails/ProductDetails";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../../firestore/config";
 
 function ProductDetailsContainer() {
   const { id } = useParams();
@@ -9,25 +11,20 @@ function ProductDetailsContainer() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/data/card/cards.json");
+    if (id) {
+      const docRef = doc(db, "cards", id);
 
-        if (!response.ok) {
-          throw new Error("No se pudo obtener información del producto.");
-        }
-
-        const data = await response.json();
-
-        const card = data.find((p) => p.id === parseInt(id));
-        setCard(card);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
+      getDoc(docRef)
+        .then((res) => {
+          if (res.exists()) {
+            setCard({ ...res.data(), id: res.id });
+          } else {
+            console.log("No se encontró el producto.");
+          }
+        })
+        .catch((err) => setError(err.message))
+        .finally(() => setLoading(false));
+    }
   }, [id]);
 
   if (loading) {
