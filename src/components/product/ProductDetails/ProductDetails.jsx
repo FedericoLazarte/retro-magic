@@ -17,7 +17,7 @@ function ProductDetails({
         <img src={urlImg} alt={`Foto de ${name}`} />
       </div>
       <div className={styles.detailsContainer}>
-        <Link to="/" className={styles.closeBtn}>
+        <Link to="/products" className={styles.closeBtn}>
           X
         </Link>
         <h3>{name}</h3>
