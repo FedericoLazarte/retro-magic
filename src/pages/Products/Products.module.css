@@ -1,0 +1,14 @@
+.products {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+.subtitle {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: var(--secondary-color);
+  text-align: center;
+}
